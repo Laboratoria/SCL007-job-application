@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import SeekerImage from './Components/SeekerImage';
+import Result from './Components/Result';
 
 class App extends Component {
 
@@ -28,7 +29,13 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-       <SeekerImage datoSerch={this.datoSerch} />
+        <SeekerImage datoSerch={this.datoSerch} />
+      <div className="row">
+        <Result 
+        images={this.state.images}
+        />
+      </div>
+
       </div>
     );
   }
