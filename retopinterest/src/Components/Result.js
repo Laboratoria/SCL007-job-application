@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Image from './Image';
 
 class Result extends Component {
 
@@ -8,7 +9,18 @@ class Result extends Component {
 
         if(images.length === 0) return null; //prevengo a mostrar el array vacio cuando la Api no este disponible
 
-        return()
+        return(
+            <React.Fragment>
+                <div className="col-12 p-5 row">
+                    {this.props.images.map(image => (
+                        <Image
+                            key={image.id}
+                            image={image}
+                        />
+                    ))}
+                </div>
+            </React.Fragment>
+        )
     }
 
 
