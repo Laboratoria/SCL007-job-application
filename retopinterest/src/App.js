@@ -5,11 +5,17 @@ import SeekerImage from './Components/SeekerImage';
 class App extends Component {
 
   state = {
-    dato : ''
+    dato : '',
+    images:[]  //array para usar con el fetch
   }
   
   consultApi = () => {
-    console.log('desde consultar api')
+    const dato = this.state.dato;
+    const url = `https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${dato}&per_page=20`;
+    
+    fetch(url)
+    .then(respuesta => respuesta.json())
+    .then(result => this.setState({images: result.hits}))
   }
 
   datoSerch = (dato) => {
