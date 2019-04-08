@@ -12,7 +12,7 @@ class App extends Component {
   
   consultApi = () => {
     const dato = this.state.dato;
-    const url = `https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${dato}&per_page=20`;
+    const url = `https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${dato}&per_page=200`;
     
     fetch(url)
     .then(respuesta => respuesta.json())
