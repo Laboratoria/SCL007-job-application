@@ -2,14 +2,16 @@ import React, { Component } from "react";
 import "./Buttons.css";
 
 class Buttons extends Component {
+
   updateSerch = (event)=>{
     this.props.updateSerch(event.target.name)
+ 
   }
 
   render() {
     return (
       <div >
-        <div className="container col-12">
+        <div className="container">
           <div className="buttons">
             <a className="btn quotes" name="Quotes" href=" # "  role="button" onClick= {this.updateSerch} >Quotes</a>
             <a className="btn fashion" name="Fashion" href=" # " role="button" onClick={this.updateSerch}>Fashion</a>

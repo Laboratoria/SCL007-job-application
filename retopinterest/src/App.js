@@ -11,10 +11,8 @@ class App extends Component {
 
     this.state = {
       page: 1,
-      serch: " ",
-      resultSerch: [],
+      serch: '',
       carga: true,
-      dato : '',
       images:[]  //array para usar con el fetch
     }
     window.onscroll = () => {
@@ -29,15 +27,6 @@ class App extends Component {
     }
   };
   }
-  
-  consultApi = () => {
-    const dato = this.state.dato;
-    const url = `https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${dato}&per_page=200`;
-    
-    fetch(url)
-    .then(respuesta => respuesta.json())
-    .then(result => this.setState({images: result.hits}))
-  }
 
   cargarMas = () => {
     let pageNew = this.state.page + 1
@@ -47,7 +36,7 @@ class App extends Component {
       .then(resp => resp.json())
       .then(datos => {
         this.setState({
-          resultSerch: oldImage.concat(datos.hits), // metodo para unir mis arreglos
+          images: oldImage.concat(datos.hits), // metodo para unir mis arreglos
           page: pageNew,
           carga: false,
         })
@@ -65,17 +54,27 @@ class App extends Component {
       .then(banco => {
         this.setState({
           page: 1,
-          resultSerch: banco.hits,
+          images: banco.hits,
           serch: newSerch,
           carga: false,
         })
       })
   }
 
+  
+  consultApi = () => {
+    const serch = this.state.serch;
+    const url = `https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${serch}&per_page=200`;
+    
+    fetch(url)
+    .then(respuesta => respuesta.json())
+    .then(result => this.setState({images: result.hits}))
+  }
+  
 
-  datoSerch = (dato) => {
+  datoSerch = (serch) => {
     this.setState({
-      dato
+      serch
     }, () => { this.consultApi(); //se ejecuta la funcion despues de actualizar el state
     }) 
   }

@@ -11,7 +11,7 @@ class Result extends Component {
 
         return(
             <React.Fragment>
-                <div>
+                <div >
                         {this.props.images.map(image => (
                             <div >
                             <Image

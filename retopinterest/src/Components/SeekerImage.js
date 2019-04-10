@@ -15,20 +15,29 @@ class SeekerImage extends Component {
       return (
         <form onSubmit={this.getDatos}>
             <div className="container">
-             <div className="row">
-                <span className=""><span className="glyphicon glyphicon-search">
-                </span></span>
-	                <input ref={this.serchRef} type="text" className="" placeholder="Buscar"></input>
-                  <i id="iconoPinterest" className="fab fa-pinterest col-1"></i>
-                  <i id="iconoSerch" className="fas fa-search"></i>
-             </div>
-             <div>
-                <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span>
+             <div className="">
+                  <i id="iconoPinterest" className="fab fa-pinterest "></i>
+                  <i id="iconoSerch" className="lupa fas fa-search"></i>
+	                <input className="input" ref={this.serchRef} type="text" placeholder=" Serch"></input>     
+            
+                <button type="button" className="close" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>    
+           
+            <select name="pines" className="pines">
+              <option>Tus Pines</option>
+              <option>Todos los Pines</option>
+              <option>Pines de Productos</option>
+              <option>Gente</option>
+              <option>Tableros</option>
+            </select>
+            <i className="user fas fa-user-circle"></i>
+            <i className="name">Martha</i>
+            <i className="home">Home</i>
+            <i className="next">Siguiendo</i>   
+            <i className="campana icono-campana fas fa-bell size:7x"></i>
+            <i className="comentario icono-campana fas fa-comment-dots"></i>
+            <i className="mas fas fa-ellipsis-h"></i>
             </div>
-            <i className=" icono-campana fas fa-comment-dots"></i>
-            <i className="icono-campana fas fa-bell size:7x"></i>
-            <i class="fas fa-ellipsis-h"></i>
             </div>
         </form>
       );
