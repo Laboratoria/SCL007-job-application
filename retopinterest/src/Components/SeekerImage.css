@@ -1,4 +1,108 @@
-.icono-campana{
-    font-size: 25px;
-    color:grey;
-}
+.container{
+  width: 100%;
+  height: 500px;
+ }
+
+
+#iconoPinterest{
+    color: rgb(224, 28, 28);
+    font-size: 31px;
+    margin-top: 18px;
+    margin-left: -120px;
+  }
+  
+  #inputSearch{
+    background-color: rgb(238, 236, 236);
+    
+    border-radius: 5px;
+    margin-top: 12px;
+    border: rgb(238, 236, 236);  
+    height: 40px;
+  }
+  
+  #iconoSerch{
+    background-color: rgb(238, 236, 236);
+    border-radius: 5px;
+    margin-top: 12px;
+    border: rgb(238, 236, 236);  
+    height: 40px;
+    color:rgb(129, 127, 127);   
+  }
+
+  #inputSearch:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem transparent !important;
+  }
+  
+  #opciones{
+    background-color: rgb(238, 236, 236);
+    border-radius: 5px;
+    margin-top: 12px;
+    border: rgb(238, 236, 236);
+    margin-left: -15px;
+    font: bold normal normal 11px/20px "Helvetica Neue",helvetica,arial,san-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #opciones:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem transparent !important;
+  }
+  
+  #iconoUser{  
+    font-size: 20px;
+    color:rgb(141, 140, 140);   
+    float: right;
+    margin-left: 20px;
+    margin-top: 15px;
+    font: bold normal normal 11px/20px "Helvetica Neue",helvetica,arial,san-serif;
+    font-size: 16px;
+  }
+  
+  #barras{  
+    color: rgb(146, 143, 143);
+    font-size: 25px;  
+    float: right;
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+  
+  #msn{  
+    color: rgb(163, 160, 160);
+    font-size: 25px; 
+    float: right;
+    margin-left: 23px;
+    margin-top: 15px;
+  }
+  
+  @media (max-width: 700px) {
+    .icono{
+      display: none;
+    }
+    #iconoPinterest{
+      margin-left: 0px;
+    }
+    #barra{
+      display: none;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    #inputSearch{
+      margin-left: 25px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    #msn{
+      display: none;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    #barras{
+      display: none;
+    }
+  }

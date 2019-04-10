@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/MarthaLizarazo/SCL007-job-application/issues"
   },
-  "homepage": "https://github.com/MarthaLizarazo/SCL007-job-application#readme"
+  "homepage": "https://github.com/MarthaLizarazo/SCL007-job-application#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "reactstrap": "^8.0.0"
+  }
 }

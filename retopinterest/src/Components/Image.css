@@ -1,0 +1,41 @@
+   .container {
+    width: 100%;
+    height: 500px;
+  }
+
+  .col-5{
+   width: 20%;
+   height: 500px;
+   margin: 0 1%;
+   float:left;
+   }
+
+   .borde{
+    border-radius: 8px;
+   }
+   
+   #galeria {
+    margin: 1rem auto;
+    width:100%;
+    max-width:960px;
+    column-count: 5;
+    break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Móviles en horizontal o tablets en vertical */
+
+@media (max-width: 767px) { 
+  #galeria {
+      columns:2;
+  }
+
+}
+      
+/* Móviles en vertical */
+
+@media (max-width: 480px) {
+  #galeria {
+      columns: 1;
+  }
+}

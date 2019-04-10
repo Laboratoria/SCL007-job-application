@@ -11,14 +11,16 @@ class Result extends Component {
 
         return(
             <React.Fragment>
-                <div className="col-12 p-5 row">
-                    {this.props.images.map(image => (
-                        <Image
-                            key={image.id}
-                            image={image}
-                        />
-                    ))}
-                </div>
+                <div>
+                        {this.props.images.map(image => (
+                            <div >
+                            <Image
+                                key={image.id}
+                                image={image}
+                            />
+                            </div>
+                        ))}
+                </div>    
             </React.Fragment>
         )
     }

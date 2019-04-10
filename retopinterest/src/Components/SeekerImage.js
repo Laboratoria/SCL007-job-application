@@ -14,12 +14,13 @@ class SeekerImage extends Component {
     render() {
       return (
         <form onSubmit={this.getDatos}>
-            <div className="row">
-             <div className="form-group col-md-8">
-                <input type="submit" className="fas fa-search"></input>
-                <span className="input-group-addon"><span className="glyphicon glyphicon-search">
+            <div className="container">
+             <div className="row">
+                <span className=""><span className="glyphicon glyphicon-search">
                 </span></span>
-	            <input ref={this.serchRef} type="text" className="form-control" placeholder="Buscar"></input>
+	                <input ref={this.serchRef} type="text" className="" placeholder="Buscar"></input>
+                  <i id="iconoPinterest" className="fab fa-pinterest col-1"></i>
+                  <i id="iconoSerch" className="fas fa-search"></i>
              </div>
              <div>
                 <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span>
@@ -35,4 +36,3 @@ class SeekerImage extends Component {
   }
   
   export default SeekerImage;
-  
