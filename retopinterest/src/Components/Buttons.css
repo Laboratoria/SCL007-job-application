@@ -1,180 +1,156 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
 .buttons{
-    margin-top: 25px;
-    text-align:center;
-    margin-left: -65px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  margin-left: 42px;
   }
-  
-  @media (max-width: 700px) {
-   .quotes{
-     display: none;
-   }
-   .fashion{
-    display: none;
-  }
-  .computer{
-    display: none;
-  }
-  .style{
-    display: none;
-  }
-  .woman{
-    display: none;
-  }
-  .pictures{
-    display: none;
-  }
-  }
-  
-  @media (max-width: 390px) {
-    .poster{
-      display: none;
-    }
-    .logo{
-     display: none;
-   }
-   .architecture{
-     display: none;
-   }
-   .faces{
-     display: none;
-   }
-   .perfil{
-    display: none;
-  }
-  .flowers{
-    display: none;
-  }
-   }
   
   .quotes{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #6a9159;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .fashion{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #c2a964;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .computer{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #afa792;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .style{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #f6869f;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .woman{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #8a416e;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .pictures{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #6a8a7f;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .poster{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #8d7638;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .logo{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #e0cd98;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .architecture{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #979385;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .faces{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #4b2a21;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .perfil{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #f3b5d4;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
   .flowers{
-    margin: 3px;
+    margin: 5px;
     text-decoration: none;
-    padding: 17px;
-    font-weight: 600;
+    padding: 18px;
     color: #ffffff;
     background-color: #72946f;
     border-radius: 6px;
     font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
   }
   
+  .nextt{
+    background:rgb(224, 221, 221);
+    margin: 5px;
+    padding: 18px;
+    border-radius: 6px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    font-size: 70px;
+    color:rgb(129, 127, 127); 
+  }

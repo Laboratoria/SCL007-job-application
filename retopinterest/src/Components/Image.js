@@ -2,24 +2,21 @@ import React from 'react';
 import './Image.css';
 
 const Image = (props) => {
-    const {largeImageURL, previewURL, tags} = props.image;
+ const {largeImageURL, previewURL, tags} = props.image;
     return(
-        <div className="container">
-        <section id="galeria" className="cards">
-        <div className="card">
-        <article>
-        <a className="card-image" href= {largeImageURL}  target="_blank" > 
-        <figure>
-            <img  src={previewURL} alt={tags} />
-        </figure>       
-            </a>      
-        </article>
-        </div>
-        </section>
-        </div>
+        <body>
+            <div className="galeria">    
+                <div className="card">
+                    <figure><h1>Guardar</h1><img src={previewURL} alt={tags} />
+                    </figure>       
+                   
+                </div>   
+            </div>
+        </body>   
     );
 }
 
 export default Image;
 
 // arreglar a modal porque abre en una hoja nueva
+//link <a className="modal" href= {largeImageURL} target ="_blank" > 
