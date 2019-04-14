@@ -6,11 +6,14 @@
 
  #galeria {
 column-count: 5;
+border: 0;
+outline: none;
 justify-content: center;
 padding: 40px;
 margin-top: -40px;
 position: relative;
 transition: all 500ms cubic-bezier(1,0,0,1);
+
 }
 
 /* Móviles en horizontal o tablets en vertical */
