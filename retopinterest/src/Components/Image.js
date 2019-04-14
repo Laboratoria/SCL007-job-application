@@ -11,7 +11,7 @@ const Image = (props) => {
                     <div className="modal">
    
                     <img className="img" src={previewURL} alt={tags}  onClick= {largeImageURL} />
-                    <a className=" img btn-recient" name="Ver" href={largeImageURL}  target ="_blank"  role="button" onClick= {largeImageURL} >...</a>
+                    <a className=" img btn-recient" name="Ver" href={largeImageURL}  target =" _blank"  role="button" onClick= {largeImageURL} >...</a>
 
                     </div>
 
