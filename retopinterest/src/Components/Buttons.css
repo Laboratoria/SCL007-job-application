@@ -1,14 +1,14 @@
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 .buttons{
-  margin: auto;
+  justify-content: center;
   width: 100%;
   display: flex;
   padding: 10px;
-  margin-left: 42px;
   }
   
   .quotes{
@@ -123,13 +123,13 @@
   
   .perfil{
     margin: 5px;
+    font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
+    display: flex;
     text-decoration: none;
     padding: 18px;
     color: #ffffff;
     background-color: #f3b5d4;
     border-radius: 6px;
-    font: bold normal normal 15px/25px "Helvetica Neue",helvetica,arial,san-serif;
-    display: flex;
   }
   
   .flowers{
@@ -144,13 +144,31 @@
   }
   
   .nextt{
-    background:rgb(224, 221, 221);
-    margin: 5px;
-    padding: 18px;
     border-radius: 6px;
+    float: left;
     display: flex;
-    width: 30px;
-    height: 30px;
-    font-size: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 7px;
+    margin-left: 5px;
+    background:rgb(224, 221, 221);
+    font-size:75px;
     color:rgb(129, 127, 127); 
   }
+
+  /* Móviles en horizontal o tablets en vertical */
+
+@media (max-width: 767px) { 
+  #buttons {
+      columns:2;
+  }
+
+}
+      
+/* Móviles en vertical */
+
+@media (max-width: 480px) {
+  #buttons {
+      columns: 1;
+  }
+}

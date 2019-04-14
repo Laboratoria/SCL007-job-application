@@ -10,7 +10,7 @@ class Buttons extends Component {
 
   render() {
     return (
-          <div className="buttons">
+          <div className="buttons" id="buttons">
             <a className="btn quotes" name="Quotes" href=" # "  role="button" onClick= {this.updateSerch} >Quotes</a>
             <a className="btn fashion" name="Fashion" href=" # " role="button" onClick={this.updateSerch}>Fashion</a>
             <a className="btn computer" name="Computer" href=" # " role="button" onClick={this.updateSerch}>Computer</a>
@@ -23,7 +23,7 @@ class Buttons extends Component {
             <a className="btn faces" name="Faces" href=" # " role="button" onClick={this.updateSerch}>Faces</a>
             <a className="btn perfil" name="Perfil" href=" # " role="button" onClick={this.updateSerch}>Perfil</a>
             <a className="btn flowers" name="Flowers" href=" # " role="button" onClick={this.updateSerch}>Flowers</a>
-            <a className="btn nextt fas fa-angle-right " name="Eyes" href=" # " role="button" onClick={this.updateSerch}> </a>
+            <a className="btn nextt fas fa-angle-right" name="Eyes" href=" # " role="button" onClick={this.updateSerch}> </a>
           </div>
 
     )

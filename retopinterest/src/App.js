@@ -10,10 +10,10 @@ class App extends Component {
     super(props)
 
     this.state = {
-      page: 1,
       serch: '',
-      carga: true,
-      images:[]  //array para usar con el fetch
+      images:[] , //array para usar en el fetch
+      page: 1,
+      carga: true
     }
     window.onscroll = () => {
     if (this.state.carga === true) {
@@ -31,8 +31,8 @@ class App extends Component {
   cargarMas = () => {
     let pageNew = this.state.page + 1
      // toma el estado de la imagen anterior
-    let oldImage = this.state.resultSerch
-    fetch(`https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${this.state.serch}&image_type=photo&lang=es&page=${pageNew}`)
+    let oldImage = this.state.images
+    fetch(`https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${this.state.serch}&image_type=photo&lang=es&page=${pageNew}&per_page=20`)
       .then(resp => resp.json())
       .then(datos => {
         this.setState({
@@ -43,49 +43,37 @@ class App extends Component {
       })
   }
 
+  componentDidMount() {
+    this.updateSerch()
+  }
+
+
 
   // utilizo fetch para consumir la Api
   // lee o da error
   // Busqueda Actualizada
   updateSerch(newSerch = "") { 
     newSerch.replace(" ", "+") // toma los espacios
-    fetch(`https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${newSerch}`)
-     .then(result => result.json())
-      .then(banco => {
+    fetch(`https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${newSerch}&image_type=photo&lang=es&page=${newSerch}&per_page=20`)
+     .then(resp => resp.json())
+      .then(datos => {
         this.setState({
           page: 1,
-          images: banco.hits,
+          images: datos.hits,
           serch: newSerch,
           carga: false,
         })
       })
   }
 
-  
-  consultApi = () => {
-    const serch = this.state.serch;
-    const url = `https://pixabay.com/api/?key=12127638-ec7d0e85d587ee82f41e48324&q=${serch}&per_page=200`;
-    
-    fetch(url)
-    .then(respuesta => respuesta.json())
-    .then(result => this.setState({images: result.hits}))
-  }
-  
-
-  datoSerch = (serch) => {
-    this.setState({
-      serch
-    }, () => { this.consultApi(); //se ejecuta la funcion despues de actualizar el state
-    }) 
-  }
 
   render() {
     return (
-      <div className="container">
-        <SeekerImage datoSerch={this.datoSerch} />
+      <div>
+      <SeekerImage updateSerch={this.updateSerch.bind(this)} />
         <Buttons updateSerch={this.updateSerch.bind(this)} />
-          <div id="galeria">
-            <Result 
+          <div id="galeria" className="imgg">
+            <Result
             images={this.state.images}
             />
       </div>

@@ -3,22 +3,20 @@ import './SeekerImage.css';
 
 class SeekerImage extends Component {
 
-    serchRef = React.createRef();
-
     getDatos = (event) => {
-        event.preventDefault();
-        const dato = this.serchRef.current.value;
-        this.props.datoSerch(dato);
+        if (event.key==="Enter"){
+        this.props.updateSerch(event.target.value);
     }
+  }
 
     render() {
       return (
-        <form onSubmit={this.getDatos}>
+        <form >
             <div className="content">
               <div className="input-header">
                 <icono id="iconoPinterest" className="fab fa-pinterest"> </icono>
                   <lupa id="iconoSerch" className="lupa fas fa-search"> </lupa>
-	                  <input className="input" ref={this.serchRef} type="text" placeholder=" Serch"></input>    
+	                  <input className="input"  onKeyPress={this.getDatos} type="text" placeholder=" Serch"></input>    
                       <close type="button" className="close" aria-label="Close"> <span aria-hidden="true">&times; </span></close>   
                         <select className="pines">
                           <option id="options">Tus Pines</option>
